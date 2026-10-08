@@ -15,5 +15,4 @@ $('[data-service]').forEach(b=>b.addEventListener('click',()=>{const parts=b.dat
 $('[data-client-phase]').forEach(b=>b.addEventListener('click',()=>{const parts=b.dataset.clientPhase.split('|');const modal=$('#client-phase-modal');if(modal){$('[data-client-phase-title]',modal).textContent=parts[0];$('[data-client-phase-copy]',modal).textContent=parts[1];modal.classList.add('open')}}));
 $('[data-close-modal]').forEach(b=>b.addEventListener('click',()=>b.closest('.modal')?.classList.remove('open')));
 $('[data-toast]').forEach(b=>b.addEventListener('click',()=>{const box=$('[data-toast-box]');if(!box)return;box.textContent=b.dataset.toast;box.classList.add('show');setTimeout(()=>box.classList.remove('show'),2400)}));
-const area=$('[data-area-range]');if(area){const out=$('[data-area-output]'),complexity=$('[data-complexity]'),price=$('[data-price]');const sync=()=>{out.textContent=area.value+' / 10';const base={single:4200,standard:18500,enterprise:62000}[complexity?.value||'standard']||18500;price.textContent='+Math.round(base*(.72+area.value*.056)).toLocaleString()};area.addEventListener('input',sync);complexity?.addEventListener('change',sync);sync()}
 });
