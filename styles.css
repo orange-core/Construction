@@ -9,3 +9,25 @@
 @media(max-width:900px){.process-detailed{grid-template-columns:1fr 1fr}.client-support>div{display:block}.client-support .actions{margin-top:20px}}
 @media(max-width:620px){.nav{height:68px}.site-header{background:rgba(18,18,18,.92)}.nav-links{top:68px;height:calc(100vh - 68px)}.hero{min-height:auto;padding-bottom:55px}.hero h1{letter-spacing:-.045em}.hero .scope{grid-template-columns:1fr}.section-head{margin-bottom:28px}.process-detailed{grid-template-columns:1fr}.client-support .actions,.actions{width:100%}.actions .btn{flex:1}.diary-item{grid-template-columns:62px 1fr}.table{min-width:620px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* Public-site layout system */
+:root{--content-max:1180px;--section-gap:clamp(72px,8vw,112px)}
+.container{width:min(var(--content-max),calc(100% - 40px))}
+.section{padding:var(--section-gap) 0}
+.section-head{align-items:flex-start;max-width:100%;margin-bottom:42px}
+.section-head>div{min-width:0;flex:1}
+.section-head>p{flex:0 1 520px;margin:8px 0 0}
+.section-head .btn{flex-shrink:0}
+.grid{align-items:stretch}.grid>*{min-width:0}
+.card{height:100%;box-sizing:border-box}
+.feature-card,.narrative-card,.stat-card,.person-card,.compliance-card{height:100%}
+.image-card{height:100%;display:flex;flex-direction:column}.image-card>div{flex:1}
+.process-line{align-items:stretch}.process-line article{height:100%;box-sizing:border-box}
+.split-feature{align-items:center}.split-feature>div{min-width:0}
+.image-feature .feature-image{height:100%}.image-feature .feature-image img{height:100%;min-height:420px;object-fit:cover}
+.intelligence-card{height:100%;box-sizing:border-box}
+.narrative-grid .text-button{display:inline-block;margin-top:18px}
+.metric-story>div{height:100%;box-sizing:border-box}
+footer .container{display:flex;justify-content:space-between;align-items:center;gap:24px}footer p{margin:0}
+@media(max-width:900px){.section-head{align-items:flex-start}.section-head>p{max-width:none}.split-feature{grid-template-columns:1fr}.image-feature .feature-image img{min-height:320px}.metric-story{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.container{width:min(100% - 28px,var(--content-max))}.section{padding:72px 0}.section-head{margin-bottom:30px}.image-feature .feature-image img{min-height:240px}footer .container{display:block}footer .footer-links{margin-bottom:12px}}
